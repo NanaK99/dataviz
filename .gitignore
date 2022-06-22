@@ -1,7 +1,7 @@
 experiments.py
 venv/
 EDA_Nana_Karapetyan_SPOTIFY.ipynb
-.idea/
+*.idea/
 .idea/inspectionProfiles
 .idea/vsc.xml
 .idea/.gitignore

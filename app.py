@@ -8,6 +8,10 @@ from jupyter_dash import JupyterDash
 import plotly.express as px
 
 
+app = JupyterDash(__name__, external_stylesheets=[dbc.themes.DARKLY])
+server = app.server
+
+#--------------------------------------------------------------------------------
 # DATA PREPARATION AND PREPROCESSING
 df = pd.read_csv("https://raw.githubusercontent.com/NanaK99/data_viz/master/spotify.csv")
 
@@ -31,9 +35,7 @@ num_cols.remove('duration_ms')
 num_cols.append('duration_min')
 
 num_cat_cols = num_cols + cat_cols
-
-
-app = JupyterDash(__name__, external_stylesheets=[dbc.themes.DARKLY])
+#--------------------------------------------------------------------------------
 
 app.layout = dbc.Container([
         dbc.Row(dbc.Col(html.H2('SPOTIFY SONG ANALYSIS', className='text-center text-primary, mb-3'))),
