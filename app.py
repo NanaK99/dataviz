@@ -13,7 +13,7 @@ server = app.server
 
 #--------------------------------------------------------------------------------
 # DATA PREPARATION AND PREPROCESSING
-df = pd.read_csv("https://raw.githubusercontent.com/NanaK99/data_viz/master/spotify.csv")
+df = pd.read_csv("https://raw.githubusercontent.com/NanaK99/dataviz/master/spotify.csv")
 
 df = df.drop('Unnamed: 0', axis=1)
 df.rename(columns={'target': 'hit'}, inplace=True)
